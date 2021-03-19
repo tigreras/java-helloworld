@@ -48,7 +48,7 @@ public class Server implements AutoCloseable {
         int port = 8080;
         httpServer = HttpServer.create(new InetSocketAddress(port), 0);
         httpServer.createContext("/", exchange -> {
-            String response = "<h1>hello, world</h1>";
+            String response = "<h1>Cloud Admin V1</h1><br><h2>Hello World ITX!</h2>";
             exchange.sendResponseHeaders(HTTP_OK_STATUS, response.getBytes().length);
             OutputStream os = exchange.getResponseBody();
             os.write(response.getBytes());
