@@ -1,4 +1,4 @@
-FROM jboss-eap73-runtime-openshift
+FROM jboss-eap73-openshift:7.3
 COPY /server $JBOSS_HOME
 USER root
 RUN yum install git -y
