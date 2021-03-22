@@ -1,4 +1,4 @@
-FROM jboss-eap73-runtime-openshift:latest
+FROM registry.redhat.io/jboss-eap-7/eap73-openjdk11-openshift-rhel8
 COPY /server $JBOSS_HOME
 USER root
 RUN yum install git -y
