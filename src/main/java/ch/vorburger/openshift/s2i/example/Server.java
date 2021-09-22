@@ -48,7 +48,7 @@ public class Server implements AutoCloseable {
         int port = 8080;
         httpServer = HttpServer.create(new InetSocketAddress(port), 0);
         httpServer.createContext("/", exchange -> {
-            String response = "<html><body><center><h1>Welcome to OpenShift COP v2</h3></p></center></body></html>";
+            String response = "<html><body><center><h1>Welcome to OpenShift COP v1</h3></p></center></body></html>";
             exchange.sendResponseHeaders(HTTP_OK_STATUS, response.getBytes().length);
             OutputStream os = exchange.getResponseBody();
             os.write(response.getBytes());
